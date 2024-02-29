@@ -1,7 +1,35 @@
-/* css rese */
+/* css reset */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* generici */
+
+header {
+    padding: 10px 0 10px 40px;
+    height: 80px;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+/* contenitore */
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* riga */
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border: 1px solid black;
 }
