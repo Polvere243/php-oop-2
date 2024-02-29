@@ -9,7 +9,7 @@
     <meta name="keyword" content="php, css, markdown">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                     <img src="" alt="">
                 </figure>
                 <figcaption>
-                    
+
                 </figcaption>
             </div>
         </div>
