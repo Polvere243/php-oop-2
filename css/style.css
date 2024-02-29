@@ -31,5 +31,12 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
-    border: 1px solid black;
+    border: 1px solid green;
+}
+
+/* carta */
+
+.card {
+    border: 1px dashed red;
+    height: 100px;
 }
