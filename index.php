@@ -13,6 +13,21 @@
 </head>
 
 <body>
-    
+    <header>
+        <h1>Il mio negozio per animali</h1>
+    </header>
+    <div class="container"> 
+        <div class="row">
+            <div class="card">
+                <figure>
+                    <img src="" alt="">
+                </figure>
+                <figcaption>
+                    
+                </figcaption>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
