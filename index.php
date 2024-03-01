@@ -23,6 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="card">
+                <div class="category"></div>
                 <figure>
                     <img src="" alt="">
                 </figure>
