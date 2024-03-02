@@ -59,9 +59,11 @@ public function setPricategory ($price)
 {
     $this ->name = $price;
 }
-public function setCategory ($category)
+public function setCategory (Category $category)
 {
-    $this ->name = $category;
+    if($category instanceof Category) $this ->name = $category;
+    else return false;
+
 }
 
 }
