@@ -14,6 +14,8 @@ class Food extends Product {
     public function __construct($image, $name, $price, Category $category, $ingredients, $expiration) 
     {
         parent::__construct($image, $name, $price, $category);
+        $this ->setIngredients($ingredients);
+        $this ->setExpiration($expiration);
     }
 
     // getter
