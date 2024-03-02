@@ -3,7 +3,7 @@
 // importo il file Category
 
 require_once __DIR__ . '/../models/Category.php';
-
+// dichiaro un array associativo colle categorie
 $categories = [
 'dog' => new Category ('Cani', 'fas fa-dog'),
 'cat' => new Category ('Gatti', 'fas fa-cat'),
