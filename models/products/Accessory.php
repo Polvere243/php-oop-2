@@ -9,7 +9,7 @@ class Accessory extends Product {
     private $colour;
     private $size;
     public static $type = 'accessory';
-    public static $icon = 'fas fa-bone';
+    public static $icon = 'fas fa-house';
     // costruttore
     public function __construct($image, $name, $price, Category $category, array $materials, $colour, $size) 
     {
