@@ -8,8 +8,8 @@ private $icon;
 // costruttore 
 public function __construct ($label, $icon) 
 {
-    $this ->label = $label;
-    $this ->icon =$icon;
+    $this ->setLabel($label) ;
+    $this ->setIcon ($icon);
 }
 
 public function getLabel($label) 
