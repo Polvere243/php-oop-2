@@ -30,9 +30,9 @@ class Food extends Product {
         return implode(', ' $this ->ingredients) . '.';
     }
     
-    public function getExpriation ($expiration)
+    public function getExpiration (string $expiration)
     {
-        return $this ->expiration;
+        return date('d-m-Y', $this ->expiration);
     }
 
     // setter
@@ -44,6 +44,6 @@ class Food extends Product {
     
     public function setExpiration ($expiration) 
     {
-        return $this ->expiration = $expiration;
+        $this ->expiration = strtotime($expiration);
     }
 } 
