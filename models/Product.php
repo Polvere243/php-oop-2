@@ -43,7 +43,7 @@ public function getCategory ($category)
     return $this ->category;
 }
 
-public function setId ()
+private function setId ()
 {
     $this ->name = uniqid();
 }
