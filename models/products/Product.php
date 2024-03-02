@@ -1,6 +1,6 @@
 <?php
 // importo la categoria
-require_once __DIR__ . '/Category.php';
+require_once __DIR__ . '/../Category.php';
 
 // classe
 class product {
