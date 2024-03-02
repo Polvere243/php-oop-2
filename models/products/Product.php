@@ -13,11 +13,11 @@ protected $category;
 
 
 // costruttore 
-public function __construct ($image, $name, $price, Category $category) 
+public function __construct ($name, $image, $price, Category $category) 
 {
     $this ->setId();
-    $this ->setImage($image);
     $this ->setName($name);
+    $this ->setImage($image);
     $this ->setPrice($price);
     $this ->setCategory($category);
 }
