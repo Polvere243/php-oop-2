@@ -11,7 +11,7 @@ class Food extends Product {
     public static $type = 'type';
     public static $icon = 'fas fa-bowl-food';
     // costruttore
-    public function __construct($image, $name, $price, Category $category, $ingredients, $expiration) 
+    public function __construct($image, $name, $price, Category $category, array $ingredients, $expiration) 
     {
         parent::__construct($image, $name, $price, $category);
         $this ->setIngredients($ingredients);
@@ -22,6 +22,12 @@ class Food extends Product {
     public function getIngredients ($ingredients)
     {
         return $this ->ingredients;
+    }
+
+    // metodo the trasforma l'array degli ingredienti in una stringa
+    public function ingredientsString():string 
+    {
+        return implode(', ' $this ->ingredients) . '.';
     }
     
     public function getExpriation ($expiration)
