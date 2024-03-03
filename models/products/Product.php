@@ -69,7 +69,10 @@ public function setPrice ($price)
 
 public function setCategory (Category $category)
 {
-    if($category instanceof Category) $this ->name = $category;
+    if($category instanceof Category) {
+        $this->category = $category;
+        return true;
+    }
     else return false;
 
 }

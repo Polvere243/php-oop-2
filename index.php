@@ -10,7 +10,6 @@ $toys = array_filter($products, fn ($p) =>$p::$type === 'Toy');
 $accessories = array_filter($products, fn ($p) =>$p::$type === 'Accessory');
 
 
-
 ?>
 
 
