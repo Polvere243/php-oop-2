@@ -3,11 +3,11 @@
 require_once __DIR__ . '/../Category.php';
 
 // classe
-class product {
+class Product {
 // variabili d'istanza
 protected $id;
-protected $image;
 protected $name;
+protected $image;
 protected $price;
 protected $category;
 
@@ -26,18 +26,22 @@ public function getId ($id)
 {
     return $this ->id;
 }
+
 public function getImage ($image)
 {
     return $this ->image;
 }
+
 public function getName ($name)
 {
     return $this ->name;
 }
+
 public function getPrice ($price)
 {
     return $this ->price;
 }
+
 public function getCategory ($category)
 {
     return $this ->category;
@@ -47,18 +51,22 @@ private function setId ()
 {
     $this ->name = uniqid();
 }
+
 public function setImage ($image)
 {
     $this ->name = $image;
 }
+
 public function setName ($name)
 {
     $this ->name = $name;
 }
+
 public function setPrice ($price)
 {
     $this ->name = $price;
 }
+
 public function setCategory (Category $category)
 {
     if($category instanceof Category) $this ->name = $category;

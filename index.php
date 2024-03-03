@@ -31,23 +31,83 @@ $accessories = array_filter($products, fn($p) =>$p::$type === 'accessory');
         <h1>Il mio negozio per animali</h1>
     </header>
     <div class="container">
-        <div class="row">
-        <div class="category">
-            <?= 
-        </div>
-            <?php foreach ($foods as $food) : ?>
-                <div class="card">
-                
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <figcaption>
-
-                </figcaption>
+        <section id="food-products">
+            <div class="row">
+                <div class="category">
+                    <h2><?= Food::$type ?> <i class="<?= Food::$icon ?>"></i></h2>
+                </div>
+                <?php foreach ($foods as $food) : ?>
+                    <div class="category">
+                        <h2><?= $food ->getCategory()->getName() ?>
+                        <i class="<?= $food ->getCategory()->getIcon() ?>"></i></h2>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="<?= $food ->getImage()?>" alt="">
+                        </figure>
+                        <figcaption>
+                            <h4> <?= $food->getName() ?></h4>
+                            <p><?=$food->ingredientsString() ?></p>
+                            <p><?=$food->getPrice() ?></p>
+                            <p><?=$food->getExpiration() ?></p>
+                        </figcaption>
+                    </div>
+                <?php endforeach ?>
+                    
             </div>
-            <?php endforeach ?>
-            
-        </div>
+        </section>
+        <section id="toy-products">
+            <div class="row">
+                <div class="category">
+                    <h2><?= Toy::$type ?> <i class="<?= Toy::$icon ?>"></i></h2>
+                </div>
+                <?php foreach ($toys as $toy) : ?>
+                    <div class="category">
+                        <h2><?= $toy ->getCategory()->getName() ?>
+                        <i class="<?= $toy ->getCategory()->getIcon() ?>"></i></h2>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="<?= $toy ->getImage()?>" alt="">
+                        </figure>
+                        <figcaption>
+                            <h4> <?= $toy->getName() ?></h4>
+                            <p><?=$toy->materialsString() ?></p>
+                            <p><?=$toy->getPrice() ?></p>
+                            <p><?=$toy->getColour() ?></p>
+                        </figcaption>
+                    </div>
+                <?php endforeach ?>
+                    
+            </div>
+        </section>
+        <section id="accessory-products">
+            <div class="row">
+                <div class="category">
+                    <h2><?= Food::$type ?> <i class="<?= Food::$icon ?>"></i></h2>
+                </div>
+                <?php foreach ($accessories as $accessory) : ?>
+                    <div class="category">
+                        <h2><?= $accessory ->getCategory()->getName() ?>
+                        <i class="<?= $accessory ->getCategory()->getIcon() ?>"></i></h2>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <img src="<?= $accessory ->getImage()?>" alt="">
+                        </figure>
+                        <figcaption>
+                            <h4> <?= $accessory->getName() ?></h4>
+                            <p><?=$accessory->materialsString() ?></p>
+                            <p><?=$accessory->getPrice() ?></p>
+                            <p><?=$accessory->getColour() ?></p>
+                            <p><?=$accessory->getSize() ?></p>
+                        </figcaption>
+                    </div>
+                <?php endforeach ?>
+                    
+            </div>
+        </section>
+        
     </div>
 
 </body>
