@@ -11,9 +11,9 @@ class Food extends Product {
     public static $type = 'Food';
     public static $icon = 'fas fa-bowl-food';
     // costruttore
-    public function __construct($image, $name, $price, Category $category, array $ingredients, $expiration) 
+    public function __construct($label, $image, $price, Category $category, array $ingredients, $expiration) 
     {
-        parent::__construct($image, $name, $price, $category);
+        parent::__construct($label, $image, $price, $category);
         $this ->setIngredients($ingredients);
         $this ->setExpiration($expiration);
     }

@@ -19,6 +19,10 @@ img {
     max-width: 100%;
 }
 
+section {
+    margin-bottom: 20px;
+}
+
 /* contenitore */
 .container {
     max-width: 1080px;

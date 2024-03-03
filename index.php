@@ -5,9 +5,11 @@ require __DIR__. '/data/products.php';
 
 // filtro gli array
 
-$foods = array_filter($products, fn($p) =>$p::$type === 'food');
-$toys = array_filter($products, fn($p) =>$p::$type === 'toy');
-$accessories = array_filter($products, fn($p) =>$p::$type === 'accessory');
+$foods = array_filter($products, fn ($p) =>$p::$type === 'Food');
+$toys = array_filter($products, fn ($p) =>$p::$type === 'Toy');
+$accessories = array_filter($products, fn ($p) =>$p::$type === 'Accessory');
+
+
 
 ?>
 
@@ -30,86 +32,87 @@ $accessories = array_filter($products, fn($p) =>$p::$type === 'accessory');
     <header>
         <h1>Il mio negozio per animali</h1>
     </header>
-    <div class="container">
-        <section id="food-products">
-            <div class="row">
-                <div class="category">
-                    <h2><?= Food::$type ?> <i class="<?= Food::$icon ?>"></i></h2>
-                </div>
-                <?php foreach ($foods as $food) : ?>
+    <main>
+        <div class="container">
+            <section id="food-products">
+                <div class="row">
                     <div class="category">
-                        <h2><?= $food ->getCategory()->getName() ?>
-                        <i class="<?= $food ->getCategory()->getIcon() ?>"></i></h2>
+                        <h2><?= Food::$type ?> <i class="<?= Food::$icon ?>"></i></h2>
                     </div>
-                    <div class="card">
-                        <figure>
-                            <img src="<?= $food ->getImage()?>" alt="">
-                        </figure>
-                        <figcaption>
-                            <h4> <?= $food->getName() ?></h4>
-                            <p><?=$food->ingredientsString() ?></p>
-                            <p><?=$food->getPrice() ?></p>
-                            <p><?=$food->getExpiration() ?></p>
-                        </figcaption>
-                    </div>
-                <?php endforeach ?>
-                    
-            </div>
-        </section>
-        <section id="toy-products">
-            <div class="row">
-                <div class="category">
-                    <h2><?= Toy::$type ?> <i class="<?= Toy::$icon ?>"></i></h2>
+                    <?php foreach ($foods as $food) : ?>
+                        <div class="category">
+                            <h2><?= $food->getCategory()->getLabel() ?>
+                            <i class="<?= $food->getCategory()->getIcon() ?>"></i></h2>
+                        </div>
+                        <div class="card">
+                            <figure>
+                                <img src="<?= $food->getImage()?>" alt="">
+                            </figure>
+                            <figcaption>
+                                <h4>Nome Prodotto: <?= $food->getLabel() ?></h4>
+                                <p> Ingredienti: <?=$food->ingredientsString() ?></p>
+                                <p>Prezzo: <?=$food->getPrice() ?></p>
+                                <p>Data di Scadenza: <?=$food->getExpiration() ?></p>
+                            </figcaption>
+                        </div>
+                    <?php endforeach ?>
+                        
                 </div>
-                <?php foreach ($toys as $toy) : ?>
+            </section>
+            <section id="toy-products">
+                <div class="row">
                     <div class="category">
-                        <h2><?= $toy ->getCategory()->getName() ?>
-                        <i class="<?= $toy ->getCategory()->getIcon() ?>"></i></h2>
+                        <h2><?= Toy::$type ?> <i class="<?= Toy::$icon ?>"></i></h2>
                     </div>
-                    <div class="card">
-                        <figure>
-                            <img src="<?= $toy ->getImage()?>" alt="">
-                        </figure>
-                        <figcaption>
-                            <h4> <?= $toy->getName() ?></h4>
-                            <p><?=$toy->materialsString() ?></p>
-                            <p><?=$toy->getPrice() ?></p>
-                            <p><?=$toy->getColour() ?></p>
-                        </figcaption>
-                    </div>
-                <?php endforeach ?>
-                    
-            </div>
-        </section>
-        <section id="accessory-products">
-            <div class="row">
-                <div class="category">
-                    <h2><?= Food::$type ?> <i class="<?= Food::$icon ?>"></i></h2>
+                    <?php foreach ($toys as $toy) : ?>
+                        <div class="category">
+                            <h2><?= $toy->getCategory()->getLabel() ?>
+                            <i class="<?= $toy->getCategory()->getIcon() ?>"></i></h2>
+                        </div>
+                        <div class="card">
+                            <figure>
+                                <img src="<?= $toy->getImage()?>" alt="">
+                            </figure>
+                            <figcaption>
+                                <h4>Nome Prodotto: <?= $toy->getLabel() ?></h4>
+                                <p>Materiali: <?=$toy->materialsString() ?></p>
+                                <p>Prezzo: <?=$toy->getPrice() ?></p>
+                                <p>Colore: <?=$toy->getColour() ?></p>
+                            </figcaption>
+                        </div>
+                    <?php endforeach ?>
+                        
                 </div>
-                <?php foreach ($accessories as $accessory) : ?>
+            </section>
+            <section id="accessory-products">
+                <div class="row">
                     <div class="category">
-                        <h2><?= $accessory ->getCategory()->getName() ?>
-                        <i class="<?= $accessory ->getCategory()->getIcon() ?>"></i></h2>
+                        <h2><?= Accessory::$type ?> <i class="<?= Accessory::$icon ?>"></i></h2>
                     </div>
-                    <div class="card">
-                        <figure>
-                            <img src="<?= $accessory ->getImage()?>" alt="">
-                        </figure>
-                        <figcaption>
-                            <h4> <?= $accessory->getName() ?></h4>
-                            <p><?=$accessory->materialsString() ?></p>
-                            <p><?=$accessory->getPrice() ?></p>
-                            <p><?=$accessory->getColour() ?></p>
-                            <p><?=$accessory->getSize() ?></p>
-                        </figcaption>
-                    </div>
-                <?php endforeach ?>
-                    
-            </div>
-        </section>
-        
-    </div>
-
+                    <?php foreach ($accessories as $accessory) : ?>
+                        <div class="category">
+                            <h2><?= $accessory->getCategory()->getLabel() ?>
+                            <i class="<?= $accessory->getCategory()->getIcon() ?>"></i></h2>
+                        </div>
+                        <div class="card">
+                            <figure>
+                                <img src="<?= $accessory->getImage()?>" alt="">
+                            </figure>
+                            <figcaption>
+                                <h4>Nome Prodotto: <?= $accessory->getLabel() ?></h4>
+                                <p>Materiali: <?=$accessory->materialsString() ?></p>
+                                <p>Prezzo: <?=$accessory->getPrice() ?></p>
+                                <p>Colore: <?=$accessory->getColour() ?></p>
+                                
+                            </figcaption>
+                        </div>
+                    <?php endforeach ?>
+                        
+                </div>
+            </section>
+            
+        </div>
+    </main>                    
 </body>
 
 </html>

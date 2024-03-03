@@ -11,9 +11,9 @@ class Accessory extends Product {
     public static $type = 'Accessory';
     public static $icon = 'fas fa-house';
     // costruttore
-    public function __construct($name, $image, $price, Category $category, array $materials, $colour = null, $size = null) 
+    public function __construct($label, $image, $price, Category $category, array $materials, $colour = null, $size = null) 
     {
-        parent::__construct($image, $name, $price, $category);
+        parent::__construct($image, $label, $price, $category);
         $this ->setMaterials($materials);
         $this ->setColour($colour);
         

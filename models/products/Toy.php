@@ -10,9 +10,9 @@ class Toy extends Product {
     public static $type = 'Toy';
     public static $icon = 'fas fa-bone';
     // costruttore
-    public function __construct($image, $name, $price, Category $category, array $materials, $colour) 
+    public function __construct($label, $image, $price, Category $category, array $materials, $colour) 
     {
-        parent::__construct($image, $name, $price, $category);
+        parent::__construct($label, $image, $price, $category);
         $this ->setMaterials($materials);
         $this ->setColour($colour);
         

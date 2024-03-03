@@ -13,10 +13,10 @@ protected $category;
 
 
 // costruttore 
-public function __construct ($name, $image, $price, Category $category) 
+public function __construct ($label, $image, $price, Category $category) 
 {
     $this ->setId();
-    $this ->setName($name);
+    $this ->setLabel($label);
     $this ->setImage($image);
     $this ->setPrice($price);
     $this ->setCategory($category);
@@ -32,9 +32,9 @@ public function getImage ($image)
     return $this ->image;
 }
 
-public function getName ($name)
+public function getLabel ($label)
 {
-    return $this ->name;
+    return $this ->label;
 }
 
 public function getPrice ($price)
@@ -49,22 +49,22 @@ public function getCategory ($category)
 
 private function setId ()
 {
-    $this ->name = uniqid();
+    $this ->id = uniqid();
 }
 
 public function setImage ($image)
 {
-    $this ->name = $image;
+    $this ->image = $image;
 }
 
-public function setName ($name)
+public function setLabel ($label)
 {
-    $this ->name = $name;
+    $this ->name = $label;
 }
 
 public function setPrice ($price)
 {
-    $this ->name = $price;
+    $this ->price = $price;
 }
 
 public function setCategory (Category $category)
