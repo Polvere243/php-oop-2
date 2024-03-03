@@ -32,8 +32,12 @@ $accessories = array_filter($products, fn($p) =>$p::$type === 'accessory');
     </header>
     <div class="container">
         <div class="row">
-            <div class="card">
-                <div class="category"></div>
+        <div class="category">
+            <?= 
+        </div>
+            <?php foreach ($foods as $food) : ?>
+                <div class="card">
+                
                 <figure>
                     <img src="" alt="">
                 </figure>
@@ -41,6 +45,8 @@ $accessories = array_filter($products, fn($p) =>$p::$type === 'accessory');
 
                 </figcaption>
             </div>
+            <?php endforeach ?>
+            
         </div>
     </div>
 
