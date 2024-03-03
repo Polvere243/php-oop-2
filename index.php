@@ -5,9 +5,9 @@ require __DIR__. '/data/products.php';
 
 // filtro gli array
 
-$foods = array_filter($products, fn($p) =>$p::type === 'food');
-$toys = array_filter($products, fn($p) =>$p::type === 'toy');
-$accessories = array_filter($products, fn($p) =>$p::type === 'accessory');
+$foods = array_filter($products, fn($p) =>$p::$type === 'food');
+$toys = array_filter($products, fn($p) =>$p::$type === 'toy');
+$accessories = array_filter($products, fn($p) =>$p::$type === 'accessory');
 
 ?>
 
