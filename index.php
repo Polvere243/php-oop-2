@@ -39,11 +39,11 @@ $accessories = array_filter($products, fn ($p) =>$p::$type === 'Accessory');
                 </div>
                 <div class="row">
                     <?php foreach ($foods as $food) : ?>
-                        <div class="category">
-                            <h2><?= $food->getCategory()->getLabel() ?> 
-                            <i class="<?= $food->getCategory()->getIcon() ?>"></i></h2>
-                        </div>
                         <div class="card">
+                            <div class="category">
+                                <h2><?= $food->getCategory()->getLabel() ?> 
+                                <i class="<?= $food->getCategory()->getIcon() ?>"></i></h2>
+                            </div>
                             <figure>
                                 <img src="<?= $food->getImage()?>" alt="<?= $food->getName() ?>">
                             </figure>
@@ -63,11 +63,11 @@ $accessories = array_filter($products, fn ($p) =>$p::$type === 'Accessory');
                 </div>
                 <div class="row">
                     <?php foreach ($toys as $toy) : ?>
-                        <div class="category">
-                            <h2><?= $toy->getCategory()->getLabel() ?>
-                            <i class="<?= $toy->getCategory()->getIcon() ?>"></i></h2>
-                        </div>
                         <div class="card">
+                            <div class="category">
+                                <h2><?= $toy->getCategory()->getLabel() ?>
+                                <i class="<?= $toy->getCategory()->getIcon() ?>"></i></h2>
+                            </div>
                             <figure>
                                 <img src="<?= $toy->getImage()?>" alt="">
                             </figure>
@@ -88,11 +88,11 @@ $accessories = array_filter($products, fn ($p) =>$p::$type === 'Accessory');
                 </div>
                 <div class="row">
                     <?php foreach ($accessories as $accessory) : ?>
-                        <div class="category">
-                            <h2><?= $accessory->getCategory()->getLabel() ?>
-                            <i class="<?= $accessory->getCategory()->getIcon() ?>"></i></h2>
-                        </div>
                         <div class="card">
+                            <div class="category">
+                                <h2><?= $accessory->getCategory()->getLabel() ?>
+                                <i class="<?= $accessory->getCategory()->getIcon() ?>"></i></h2>
+                            </div>
                             <figure>
                                 <img src="<?= $accessory->getImage()?>" alt="<?= $accessory->getName() ?>">
                             </figure>
