@@ -7,7 +7,7 @@ class Toy extends Product {
     // variabili d'istanza
     private $materials;
     private $colour;
-    public static $type = 'toy';
+    public static $type = 'Toy';
     public static $icon = 'fas fa-bone';
     // costruttore
     public function __construct($image, $name, $price, Category $category, array $materials, $colour) 

@@ -8,7 +8,7 @@ class Food extends Product {
     // variabili d'istanza
     private $ingredients;
     private $expiration;
-    public static $type = 'type';
+    public static $type = 'Food';
     public static $icon = 'fas fa-bowl-food';
     // costruttore
     public function __construct($image, $name, $price, Category $category, array $ingredients, $expiration) 
