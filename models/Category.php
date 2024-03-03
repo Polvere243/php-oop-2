@@ -13,7 +13,7 @@ public function __construct ($label, $icon)
 }
 
 // getter per l'etichetta
-public function getLabel($label) 
+public function getLabel() 
 {
     return $this ->label; 
 }
@@ -24,7 +24,7 @@ public function setLabel ($label)
 }
 
 // getter per l'icona
-public function getIcon($icon) 
+public function getIcon() 
 {
     return $this ->icon; 
 }

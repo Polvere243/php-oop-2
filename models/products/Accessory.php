@@ -20,7 +20,7 @@ class Accessory extends Product {
     }
 
     // getter
-    public function getMaterials ($materials)
+    public function getMaterials ()
     {
         return $this ->materials;
     }
@@ -31,7 +31,7 @@ class Accessory extends Product {
         return implode(', ', $this ->materials) . '.';
     }
     
-    public function getColour($colour)
+    public function getColour()
     {
         return $this ->colour;
     }

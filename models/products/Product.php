@@ -13,36 +13,36 @@ protected $category;
 
 
 // costruttore 
-public function __construct ($label, $image, $price, Category $category) 
+public function __construct ($name, $image, $price, Category $category) 
 {
     $this ->setId();
-    $this ->setLabel($label);
+    $this ->setName($name);
     $this ->setImage($image);
     $this ->setPrice($price);
     $this ->setCategory($category);
 }
 
-public function getId ($id)
+public function getId ()
 {
     return $this ->id;
 }
 
-public function getImage ($image)
+public function getImage ()
 {
     return $this ->image;
 }
 
-public function getLabel ($label)
+public function getName ()
 {
-    return $this ->label;
+    return $this ->name;
 }
 
-public function getPrice ($price)
+public function getPrice ()
 {
     return $this ->price;
 }
 
-public function getCategory ($category)
+public function getCategory ()
 {
     return $this ->category;
 }
@@ -57,9 +57,9 @@ public function setImage ($image)
     $this ->image = $image;
 }
 
-public function setLabel ($label)
+public function setName ($name)
 {
-    $this ->name = $label;
+    $this ->name = $name;
 }
 
 public function setPrice ($price)

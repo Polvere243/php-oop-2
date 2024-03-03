@@ -11,3 +11,4 @@ $categories = [
 'bird' => new Category ('Uccelli', 'fas fa-feather-pointed'),
 'fish' => new Category ('Pesci', 'fas fa-fish-fins')
 ];
+

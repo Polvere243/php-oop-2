@@ -30,7 +30,7 @@ class Food extends Product {
         return implode(', ', $this ->ingredients) . '.';
     }
     
-    public function getExpiration (string $expiration)
+    public function getExpiration ()
     {
         return date('d-m-Y', $this ->expiration);
     }

@@ -15,12 +15,18 @@ header {
 
 
 
-img {
-    max-width: 100%;
+figure img {
+    width: 200px;
 }
 
 section {
     margin-bottom: 20px;
+}
+
+
+
+figcaption {
+    line-height: 2;
 }
 
 /* contenitore */
@@ -37,12 +43,14 @@ section {
     flex-wrap: wrap;
     align-content: flex-start;
     margin: 0 -10px;
+
 }
 
 /* carta */
 
 .card {
     padding: 0 10px;
+    width: 250px;
 }
 
 /* contenitore per l'etichetta */

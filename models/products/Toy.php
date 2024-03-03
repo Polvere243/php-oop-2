@@ -19,7 +19,7 @@ class Toy extends Product {
     }
 
     // getter
-    public function getMaterials ($materials)
+    public function getMaterials ()
     {
         return $this ->materials;
     }
@@ -30,7 +30,7 @@ class Toy extends Product {
         return implode(', ', $this ->materials) . '.';
     }
     
-    public function getColour($colour)
+    public function getColour()
     {
         return $this ->colour;
     }
