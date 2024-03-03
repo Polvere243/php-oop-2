@@ -27,7 +27,7 @@ class Toy extends Product {
     // metodo the trasforma l'array degli ingredienti in una stringa
     public function materialsString():string 
     {
-        return implode(', ' $this ->materials) . '.';
+        return implode(', ', $this ->materials) . '.';
     }
     
     public function getColour($colour)

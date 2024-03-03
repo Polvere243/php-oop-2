@@ -6,7 +6,7 @@ require_once __DIR__ . '/../Category.php';
 class product {
 // variabili d'istanza
 protected $id;
-protected $image
+protected $image;
 protected $name;
 protected $price;
 protected $category;
@@ -55,7 +55,7 @@ public function setName ($name)
 {
     $this ->name = $name;
 }
-public function setPricategory ($price)
+public function setPrice ($price)
 {
     $this ->name = $price;
 }

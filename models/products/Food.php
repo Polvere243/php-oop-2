@@ -27,7 +27,7 @@ class Food extends Product {
     // metodo the trasforma l'array degli ingredienti in una stringa
     public function ingredientsString():string 
     {
-        return implode(', ' $this ->ingredients) . '.';
+        return implode(', ', $this ->ingredients) . '.';
     }
     
     public function getExpiration (string $expiration)
